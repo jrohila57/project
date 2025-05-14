@@ -37,6 +37,7 @@ export class TodosController {
   @Post()
   async create(@Body() createTodoDto: CreateTodoDto, @Req() req: RequestWithUser) {
     const userId = req.user.sub;
+    console.log({ APP: req.user });
     return this.todosService.create(userId, createTodoDto);
   }
 
@@ -57,8 +58,8 @@ export class TodosController {
   @UseGuards(JwtAuthGuard)
   @Patch(':id')
   async update(
-    @Param('id') id: string, 
-    @Body() updateTodoDto: UpdateTodoDto, 
+    @Param('id') id: string,
+    @Body() updateTodoDto: UpdateTodoDto,
     @Req() req: RequestWithUser
   ) {
     const userId = req.user.sub;

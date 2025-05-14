@@ -675,7 +675,7 @@ export class TodosComponent implements OnInit {
 
   loadProjects() {
     this.http
-      .get<Project[]>('http://localhost:3000/projects')
+      .get<Project[]>('http://localhost:3000/api/projects')
       .pipe(
         catchError(error => {
           this.snackBar.open('Failed to load projects', 'Dismiss', { duration: 3000 });
@@ -696,7 +696,7 @@ export class TodosComponent implements OnInit {
 
   loadTodos() {
     this.loading = true;
-    let url = 'http://localhost:3000/todos';
+    let url = 'http://localhost:3000/api/todos';
     if (this.projectId) {
       url += `?projectId=${this.projectId}`;
     }
@@ -760,7 +760,7 @@ export class TodosComponent implements OnInit {
 
   createTodo(todoData: Partial<Todo>) {
     this.http
-      .post<Todo>('http://localhost:3000/todos', todoData)
+      .post<Todo>('http://localhost:3000/api/todos', todoData)
       .pipe(
         catchError(error => {
           this.snackBar.open('Failed to create task', 'Dismiss', { duration: 3000 });
@@ -778,7 +778,7 @@ export class TodosComponent implements OnInit {
 
   updateTodo(id: string, todoData: Partial<Todo>) {
     this.http
-      .patch<Todo>(`http://localhost:3000/todos/${id}`, todoData)
+      .patch<Todo>(`http://localhost:3000/api/todos/${id}`, todoData)
       .pipe(
         catchError(error => {
           this.snackBar.open('Failed to update task', 'Dismiss', { duration: 3000 });
@@ -800,7 +800,7 @@ export class TodosComponent implements OnInit {
   deleteTodo(id: string) {
     if (confirm('Are you sure you want to delete this task?')) {
       this.http
-        .delete(`http://localhost:3000/todos/${id}`)
+        .delete(`http://localhost:3000/api/todos/${id}`)
         .pipe(
           catchError(error => {
             this.snackBar.open('Failed to delete task', 'Dismiss', { duration: 3000 });

@@ -274,7 +274,7 @@ export class ProjectsComponent implements OnInit {
   loadProjects() {
     this.loading = true;
     this.http
-      .get<Project[]>('http://localhost:3000/projects')
+      .get<Project[]>('http://localhost:3000/api/projects')
       .pipe(
         catchError(error => {
           this.snackBar.open('Failed to load projects', 'Dismiss', { duration: 3000 });
@@ -307,7 +307,7 @@ export class ProjectsComponent implements OnInit {
 
   updateProject(id: string, project: Project) {
     this.http
-      .patch<Project>(`http://localhost:3000/projects/${id}`, project)
+      .patch<Project>(`http://localhost:3000/api/projects/${id}`, project)
       .pipe(
         catchError(error => {
           this.snackBar.open('Failed to update project', 'Dismiss', { duration: 3000 });
@@ -322,7 +322,7 @@ export class ProjectsComponent implements OnInit {
 
   createProject(project: Project) {
     this.http
-      .post<Project>('http://localhost:3000/projects', project)
+      .post<Project>('http://localhost:3000/api/projects', project)
       .pipe(
         catchError(error => {
           this.snackBar.open('Failed to create project', 'Dismiss', { duration: 3000 });
@@ -337,7 +337,7 @@ export class ProjectsComponent implements OnInit {
 
   deleteProject(id: string) {
     this.http
-      .delete<void>(`http://localhost:3000/projects/${id}`)
+      .delete<void>(`http://localhost:3000/api/projects/${id}`)
       .pipe(
         catchError(error => {
           this.snackBar.open('Failed to delete project', 'Dismiss', { duration: 3000 });

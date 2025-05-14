@@ -47,6 +47,7 @@ export class TodosService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(userId: string, createTodoDto: CreateTodoDto): Promise<Todo> {
+ 
     // Get default project if not specified
     let projectId = createTodoDto.projectId;
     
@@ -82,7 +83,7 @@ export class TodosService {
       });
       
       if (!project) {
-        throw new NotFoundException(`Project not found or does not belong to user`);
+        throw new NotFoundException(`Project id:${projectId} not found or does not belong to user id: ${userId}`);
       }
     }
 

@@ -43,6 +43,6 @@ export class UsersComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:3000/users').subscribe(users => (this.users = users));
+    this.http.get<any[]>('http://localhost:3000/api/users').subscribe(users => (this.users = users));
   }
 }
