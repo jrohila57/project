@@ -1,0 +1,28 @@
+FROM node:20-slim
+
+# Install pnpm
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json files for all workspaces
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY apps/api/package.json ./apps/api/
+COPY packages/shared/package.json ./packages/shared/
+COPY packages/tsconfig/package.json ./packages/tsconfig/
+COPY packages/eslint-config/package.json ./packages/eslint-config/
+
+# Install dependencies
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install
+
+# Copy the rest of the source code
+COPY . .
+
+# Expose API port
+EXPOSE 3000
+
+# Start the development server
+CMD ["pnpm", "--filter", "api", "dev"] 

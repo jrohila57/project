@@ -1,0 +1,319 @@
+
+> api@0.0.1 dev
+> npx nest start --watch
+
+[2J[3J[H[[90m8:51:37 AM[0m] Starting compilation in watch mode...
+
+[96msrc/auth/strategies/jwt.strategy.ts[0m:[93m3[0m:[93m38[0m - [91merror[0m[90m TS7016: [0mCould not find a declaration file for module 'passport-jwt'. '/home/jayant/boiler-plate/angular-nest-monorepo/project/node_modules/.pnpm/passport-jwt@4.0.1/node_modules/passport-jwt/lib/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/passport-jwt` if it exists or add a new declaration (.d.ts) file containing `declare module 'passport-jwt';`
+
+[7m3[0m import { ExtractJwt, Strategy } from 'passport-jwt';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~[0m
+
+[96msrc/projects/dto/create-project.dto.ts[0m:[93m1[0m:[93m50[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+[7m [0m [91m                                                 ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/projects/dto/create-project.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'name' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   name: string;
+[7m [0m [91m  ~~~~[0m
+
+[96msrc/projects/dto/update-project.dto.ts[0m:[93m1[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsBoolean, IsOptional, IsString } from 'class-validator';
+[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m1[0m:[93m100[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsArray, IsBoolean, IsDateString, IsEnum, IsNotEmpty, IsOptional, IsString, IsUUID } from 'class-validator';
+[7m [0m [91m                                                                                                   ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m2[0m:[93m42[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { TodoPriority, TodoStatus } from '@shared/interfaces';
+[7m [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'title' has no initializer and is not definitely assigned in the constructor.
+
+[7m7[0m   title: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m44[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'projectId' has no initializer and is not definitely assigned in the constructor.
+
+[7m44[0m   projectId: string;
+[7m  [0m [91m  ~~~~~~~~~[0m
+
+[96msrc/todos/dto/update-todo.dto.ts[0m:[93m1[0m:[93m88[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsArray, IsBoolean, IsDateString, IsEnum, IsOptional, IsString, IsUUID } from 'class-validator';
+[7m [0m [91m                                                                                       ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/update-todo.dto.ts[0m:[93m2[0m:[93m42[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { TodoPriority, TodoStatus } from '@shared/interfaces';
+[7m [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/todos.controller.ts[0m:[93m20[0m:[93m64[0m - [91merror[0m[90m TS1016: [0mA required parameter cannot follow an optional parameter.
+
+[7m20[0m   async findAll(@Query('projectId') projectId?: string, @Req() req: Request) {
+[7m  [0m [91m                                                               ~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m1[0m:[93m67[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsEmail, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
+[7m [0m [91m                                                                  ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   email: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m11[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.
+
+[7m11[0m   password: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m16[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'name' has no initializer and is not definitely assigned in the constructor.
+
+[7m16[0m   name: string;
+[7m  [0m [91m  ~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m1[0m:[93m47[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+[7m [0m [91m                                              ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   email: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m10[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.
+
+[7m10[0m   password: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+
+[96msrc/users/dto/update-user.dto.ts[0m:[93m1[0m:[93m65[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsBoolean, IsEnum, IsOptional, IsString, Length } from 'class-validator';
+[7m [0m [91m                                                                ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/update-user.dto.ts[0m:[93m2[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { UserSort, UserTheme } from '@shared/interfaces';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m8:51:41 AM[0m] Found 20 errors. Watching for file changes.
+
+[2J[3J[H[[90m8:51:44 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/auth/strategies/jwt.strategy.ts[0m:[93m3[0m:[93m38[0m - [91merror[0m[90m TS7016: [0mCould not find a declaration file for module 'passport-jwt'. '/home/jayant/boiler-plate/angular-nest-monorepo/project/node_modules/.pnpm/passport-jwt@4.0.1/node_modules/passport-jwt/lib/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/passport-jwt` if it exists or add a new declaration (.d.ts) file containing `declare module 'passport-jwt';`
+
+[7m3[0m import { ExtractJwt, Strategy } from 'passport-jwt';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~[0m
+
+[96msrc/projects/dto/create-project.dto.ts[0m:[93m1[0m:[93m50[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+[7m [0m [91m                                                 ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/projects/dto/create-project.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'name' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   name: string;
+[7m [0m [91m  ~~~~[0m
+
+[96msrc/projects/dto/update-project.dto.ts[0m:[93m1[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsBoolean, IsOptional, IsString } from 'class-validator';
+[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m1[0m:[93m100[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsArray, IsBoolean, IsDateString, IsEnum, IsNotEmpty, IsOptional, IsString, IsUUID } from 'class-validator';
+[7m [0m [91m                                                                                                   ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m2[0m:[93m42[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { TodoPriority, TodoStatus } from '@shared/interfaces';
+[7m [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'title' has no initializer and is not definitely assigned in the constructor.
+
+[7m7[0m   title: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m44[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'projectId' has no initializer and is not definitely assigned in the constructor.
+
+[7m44[0m   projectId: string;
+[7m  [0m [91m  ~~~~~~~~~[0m
+
+[96msrc/todos/dto/update-todo.dto.ts[0m:[93m1[0m:[93m88[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsArray, IsBoolean, IsDateString, IsEnum, IsOptional, IsString, IsUUID } from 'class-validator';
+[7m [0m [91m                                                                                       ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/update-todo.dto.ts[0m:[93m2[0m:[93m42[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { TodoPriority, TodoStatus } from '@shared/interfaces';
+[7m [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/todos.controller.ts[0m:[93m20[0m:[93m64[0m - [91merror[0m[90m TS1016: [0mA required parameter cannot follow an optional parameter.
+
+[7m20[0m   async findAll(@Query('projectId') projectId?: string, @Req() req: Request) {
+[7m  [0m [91m                                                               ~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m1[0m:[93m67[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsEmail, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
+[7m [0m [91m                                                                  ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   email: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m11[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.
+
+[7m11[0m   password: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m16[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'name' has no initializer and is not definitely assigned in the constructor.
+
+[7m16[0m   name: string;
+[7m  [0m [91m  ~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m1[0m:[93m47[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+[7m [0m [91m                                              ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   email: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m10[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.
+
+[7m10[0m   password: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+
+[96msrc/users/dto/update-user.dto.ts[0m:[93m1[0m:[93m65[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsBoolean, IsEnum, IsOptional, IsString, Length } from 'class-validator';
+[7m [0m [91m                                                                ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/update-user.dto.ts[0m:[93m2[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { UserSort, UserTheme } from '@shared/interfaces';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m8:51:45 AM[0m] Found 20 errors. Watching for file changes.
+
+[2J[3J[H[[90m8:51:47 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/auth/strategies/jwt.strategy.ts[0m:[93m3[0m:[93m38[0m - [91merror[0m[90m TS7016: [0mCould not find a declaration file for module 'passport-jwt'. '/home/jayant/boiler-plate/angular-nest-monorepo/project/node_modules/.pnpm/passport-jwt@4.0.1/node_modules/passport-jwt/lib/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/passport-jwt` if it exists or add a new declaration (.d.ts) file containing `declare module 'passport-jwt';`
+
+[7m3[0m import { ExtractJwt, Strategy } from 'passport-jwt';
+[7m [0m [91m                                     ~~~~~~~~~~~~~~[0m
+
+[96msrc/projects/dto/create-project.dto.ts[0m:[93m1[0m:[93m50[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+[7m [0m [91m                                                 ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/projects/dto/create-project.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'name' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   name: string;
+[7m [0m [91m  ~~~~[0m
+
+[96msrc/projects/dto/update-project.dto.ts[0m:[93m1[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsBoolean, IsOptional, IsString } from 'class-validator';
+[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m1[0m:[93m100[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsArray, IsBoolean, IsDateString, IsEnum, IsNotEmpty, IsOptional, IsString, IsUUID } from 'class-validator';
+[7m [0m [91m                                                                                                   ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m2[0m:[93m42[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { TodoPriority, TodoStatus } from '@shared/interfaces';
+[7m [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'title' has no initializer and is not definitely assigned in the constructor.
+
+[7m7[0m   title: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/todos/dto/create-todo.dto.ts[0m:[93m44[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'projectId' has no initializer and is not definitely assigned in the constructor.
+
+[7m44[0m   projectId: string;
+[7m  [0m [91m  ~~~~~~~~~[0m
+
+[96msrc/todos/dto/update-todo.dto.ts[0m:[93m1[0m:[93m88[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsArray, IsBoolean, IsDateString, IsEnum, IsOptional, IsString, IsUUID } from 'class-validator';
+[7m [0m [91m                                                                                       ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/dto/update-todo.dto.ts[0m:[93m2[0m:[93m42[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { TodoPriority, TodoStatus } from '@shared/interfaces';
+[7m [0m [91m                                         ~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/todos/todos.controller.ts[0m:[93m20[0m:[93m64[0m - [91merror[0m[90m TS1016: [0mA required parameter cannot follow an optional parameter.
+
+[7m20[0m   async findAll(@Query('projectId') projectId?: string, @Req() req: Request) {
+[7m  [0m [91m                                                               ~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m1[0m:[93m67[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsEmail, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
+[7m [0m [91m                                                                  ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   email: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m11[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.
+
+[7m11[0m   password: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+
+[96msrc/users/dto/create-user.dto.ts[0m:[93m16[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'name' has no initializer and is not definitely assigned in the constructor.
+
+[7m16[0m   name: string;
+[7m  [0m [91m  ~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m1[0m:[93m47[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+[7m [0m [91m                                              ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'email' has no initializer and is not definitely assigned in the constructor.
+
+[7m6[0m   email: string;
+[7m [0m [91m  ~~~~~[0m
+
+[96msrc/users/dto/login-user.dto.ts[0m:[93m10[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'password' has no initializer and is not definitely assigned in the constructor.
+
+[7m10[0m   password: string;
+[7m  [0m [91m  ~~~~~~~~[0m
+
+[96msrc/users/dto/update-user.dto.ts[0m:[93m1[0m:[93m65[0m - [91merror[0m[90m TS2307: [0mCannot find module 'class-validator' or its corresponding type declarations.
+
+[7m1[0m import { IsBoolean, IsEnum, IsOptional, IsString, Length } from 'class-validator';
+[7m [0m [91m                                                                ~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/users/dto/update-user.dto.ts[0m:[93m2[0m:[93m37[0m - [91merror[0m[90m TS2307: [0mCannot find module '@shared/interfaces' or its corresponding type declarations.
+
+[7m2[0m import { UserSort, UserTheme } from '@shared/interfaces';
+[7m [0m [91m                                    ~~~~~~~~~~~~~~~~~~~~[0m
+
+[[90m8:51:47 AM[0m] Found 20 errors. Watching for file changes.
+
